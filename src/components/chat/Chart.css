@@ -1,0 +1,22 @@
+.chart-section {
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+}
+
+.custom-chart-icon {
+  width: 100px;
+  height: 3vh;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.image-bg {
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  background: rgba(226, 229, 255, 0.05) !important;
+  backdrop-filter: blur(7.5px) !important;
+}
+
+.chart-sub-text {
+  max-width: 600px;
+}

@@ -1,0 +1,16 @@
+@media (max-width: 991px) {
+  .sidebar {
+    min-height: 100vh;
+  }
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar img {
+  max-width: 180px;
+}

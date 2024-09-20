@@ -1,0 +1,25 @@
+.b-color {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 1, 48, 0.9) -1%,
+    rgba(4, 1, 48, 0.9) 31.16%,
+    hsl(244, 96%, 5%) 84.24%
+  );
+}
+
+.logo-image {
+  max-width: 180px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.sub-text {
+  color: #d2d2d5;
+}
+
+.max-width-item {
+  max-width: 150px;
+}

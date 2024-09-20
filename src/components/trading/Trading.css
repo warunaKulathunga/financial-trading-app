@@ -1,0 +1,17 @@
+.small-icon {
+  top: 220px;
+  left: 320px;
+  width: 50%;
+  height: 50%;
+}
+
+.trading-card {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(226, 229, 255, 0.05);
+  backdrop-filter: blur(7.5px);
+}
+
+.trading-text {
+  max-width: 450px;
+}
