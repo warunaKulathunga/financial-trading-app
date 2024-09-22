@@ -12,7 +12,7 @@ const Chart = () => {
             <img src={frameIcon} alt="logo" width={14} height={14} />
             <p className="text-white fs-6 fw-lighter m-0">Charting</p>
           </div>
-          <h5 className="text-white mt-3 display-5 fw-normal mx-auto chart-sub-text">
+          <h5 className="text-white mt-2 display-6 fw-normal mx-auto chart-sub-text">
             Engage in Trading within a Familiar Environment.
           </h5>
           <p className="text-white mt-3 fs-6 fw-light mx-auto chart-sub-text">

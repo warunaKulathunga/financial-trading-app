@@ -1,0 +1,112 @@
+.testimonial-bg-color {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 1, 48, 0.9) -1%,
+    rgba(4, 1, 48, 0.9) 31.16%,
+    hsl(244, 96%, 5%) 84.24%
+  );
+  padding-bottom: 14vh;
+}
+
+.star-icon {
+  width: 130px;
+}
+
+.avatar-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.testimonial-card {
+  border: 1px solid #040130 !important;
+  background: var(
+    --Fill-1,
+    linear-gradient(
+      135deg,
+      rgba(41, 171, 226, 0.16) 0%,
+      rgba(122, 22, 230, 0.16) 100%
+    )
+  ) !important;
+  min-width: 200px !important;
+}
+
+.custom-testimonial-icon {
+  width: 120px;
+  height: 3vh;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.circle-container {
+  position: relative;
+  max-width: 200px;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-icon-test {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.test-icon-child-one {
+  margin-left: -100px;
+  border: 3px solid white !important;
+  border-radius: 50%;
+}
+
+.test-icon-child-two {
+  margin-left: -30px;
+  border: 3px solid white !important;
+  border-radius: 50%;
+}
+
+.test-icon-child-three {
+  margin-left: 30px;
+  border: 3px solid white !important;
+  border-radius: 50%;
+}
+
+.test-icon-child-four {
+  margin-left: 90px;
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.manual-circle {
+  width: 60px;
+  height: 60px;
+  border: 3px solid white !important;
+  border-radius: 50%;
+  background: var(
+    --Fill-Icon-1,
+    linear-gradient(135deg, #29abe2 0%, #7a16e6 100%)
+  );
+  color: white !important;
+}
+
+.arrow-right-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-radius: 100px;
+  background: var(
+    --Fill-Icon-1,
+    linear-gradient(135deg, #29abe2 0%, #7a16e6 100%)
+  );
+  color: white !important;
+}
+
+.arrow-left-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--Fill-Icon-1, #29abe2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white !important;
+}

@@ -5,6 +5,9 @@ import HeaderSection from "./pages/HeaderSection";
 import Features from "./components/features/Features";
 import Chart from "./components/chat/Chart";
 import Trading from "./components/trading/Trading";
+import Pricing from "./components/pricing/Pricing";
+import Testimonial from "./components/testimonial/Testimonial";
+import Faq from "./components/faq/Faq";
 
 function App() {
   return (
@@ -14,7 +17,10 @@ function App() {
         <Features />
         <Chart />
         <Trading />
+        <Pricing />
       </div>
+      <Testimonial />
+      <Faq />
       <Footer />
     </>
   );

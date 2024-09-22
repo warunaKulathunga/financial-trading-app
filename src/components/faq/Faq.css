@@ -1,0 +1,24 @@
+.faq-bg {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 1, 48, 0.9) -1%,
+    rgba(4, 1, 48, 0.9) 31.16%,
+    hsl(244, 96%, 5%) 84.24%
+  );
+}
+
+.custom-faq-icon {
+  width: 80px;
+  height: 3vh;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+.accordion-button {
+  background-color: #040130 !important;
+  color: white !important;
+}
+
+.accordion-item {
+  background-color: #040130 !important;
+  color: white !important;
+}

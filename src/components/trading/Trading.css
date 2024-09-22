@@ -6,10 +6,10 @@
 }
 
 .trading-card {
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(226, 229, 255, 0.05);
-  backdrop-filter: blur(7.5px);
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  background: rgba(226, 229, 255, 0.05) !important;
+  backdrop-filter: blur(7.5px) !important;
 }
 
 .trading-text {
