@@ -22,3 +22,14 @@
   background-color: #040130 !important;
   color: white !important;
 }
+
+/* Hide the default Bootstrap chevron */
+.accordion-button::after {
+  display: none !important;
+}
+
+/* Style the custom icon */
+.accordion-button .icon {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

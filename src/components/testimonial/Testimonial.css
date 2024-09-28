@@ -17,19 +17,6 @@
   height: 60px;
 }
 
-.testimonial-card {
-  border: 1px solid #040130 !important;
-  background: var(
-    --Fill-1,
-    linear-gradient(
-      135deg,
-      rgba(41, 171, 226, 0.16) 0%,
-      rgba(122, 22, 230, 0.16) 100%
-    )
-  ) !important;
-  min-width: 200px !important;
-}
-
 .custom-testimonial-icon {
   width: 120px;
   height: 3vh;
@@ -109,4 +96,45 @@
   border: 1px solid var(--Fill-Icon-1, #29abe2);
   background: rgba(255, 255, 255, 0.1);
   color: white !important;
+}
+
+.testimonial-card {
+  position: relative; /* Allows positioning of pseudo-elements */
+  background: var(
+    --Fill-1,
+    linear-gradient(
+      135deg,
+      rgba(41, 171, 226, 0.16) 0%,
+      rgba(122, 22, 230, 0.16) 100%
+    )
+  ) !important;
+  min-width: 200px !important;
+  border-radius: 1.25rem;
+  overflow: hidden; /* Ensure the border doesn't go outside the card */
+}
+
+/* Pseudo-element for the top-left corner */
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 260px;
+  border-top: 1px solid var(--Fill-Icon-1, #29abe2);
+  border-left: 1px solid var(--Fill-Icon-1, #29abe2);
+  border-top-left-radius: 1.25rem;
+}
+
+/* Pseudo-element for the bottom-right corner */
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  height: 250px;
+  border-bottom: 1px solid var(--Fill-Icon-1, #29abe2);
+  border-right: 1px solid var(--Fill-Icon-1, #29abe2);
+  border-bottom-right-radius: 1.25rem;
 }

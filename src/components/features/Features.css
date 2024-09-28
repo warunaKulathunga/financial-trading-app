@@ -16,7 +16,19 @@
   color: #a5a5ab;
 }
 
+.gradient-feature-btn {
+  background: var(
+    --Fill-Icon-1,
+    linear-gradient(135deg, #29abe2 0%, #7a16e6 100%)
+  );
+  color: white !important;
+  border: none !important;
+  height: 40px;
+  min-width: 150px;
+}
+
 .custom-feature-card {
+  position: relative;
   background: var(
     --Fill-1,
     linear-gradient(
@@ -29,13 +41,28 @@
   min-width: 200px !important;
 }
 
-.gradient-feature-btn {
-  background: var(
-    --Fill-Icon-1,
-    linear-gradient(135deg, #29abe2 0%, #7a16e6 100%)
-  );
-  color: white !important;
-  border: none !important;
-  height: 40px;
-  min-width: 150px;
+/* Pseudo-element for the top-left corner */
+.custom-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 260px;
+  border-top: 1px solid var(--Fill-Icon-1, #29abe2);
+  border-left: 1px solid var(--Fill-Icon-1, #29abe2);
+  border-top-left-radius: 1.25rem;
+}
+
+/* Pseudo-element for the bottom-right corner */
+.custom-feature-card ::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  height: 250px;
+  border-bottom: 1px solid var(--Fill-Icon-1, #29abe2);
+  border-right: 1px solid var(--Fill-Icon-1, #29abe2);
+  border-bottom-right-radius: 1.25rem;
 }

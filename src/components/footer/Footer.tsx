@@ -11,11 +11,12 @@ const Footer = () => {
       <div className="container text-center p-5">
         <div className="row">
           <div className="col mt-4 mt-sm-0">
-            <img
+            {/* <img
               src={`${process.env.PUBLIC_URL}/Logo.png`}
               alt="logo"
               className="logo-image"
-            />
+            /> */}
+            <p className="text-white fw-bold fs-5">Logo</p>
             <p className="fs-6 mt-2 text-start sub-text max-width-item fs-6 fw-light">
               The Premier Charting Service Creating the Future of Trading.
             </p>

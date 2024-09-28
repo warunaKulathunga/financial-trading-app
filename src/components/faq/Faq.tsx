@@ -1,8 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import frameIcon from "./../../assets/images/Frame.png";
 import "./Faq.css";
 
-const Faq = () => {
+interface FAQItemProps {
+  question: string;
+  answer: string;
+}
+
+const Faq: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null); // Track active accordion
+
+  const toggleAccordion = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index); // Toggle accordion based on index
+  };
+
+  const faqItems: FAQItemProps[] = [
+    {
+      question: "How do I sign up for Era Chart?",
+      answer:
+        "Click Launch Charts in the header. This will bring you to the login/registration page. If it's your first time here, make an account.. it's free!",
+    },
+    {
+      question: "Is Era Charts free to use?",
+      answer:
+        "Yes, Era Charts is free to use with basic features. You can access premium features by subscribing to our pro plans.",
+    },
+    {
+      question: "Can I trade directly on Era Charts?",
+      answer:
+        "No, Era Charts is a tool for charting and analyzing data. For trading, you need to connect to a broker.",
+    },
+    {
+      question: "How secure is my data on Era Charts?",
+      answer:
+        "We use industry-standard security measures, including encryption and multi-factor authentication, to protect your data.",
+    },
+    {
+      question: "Can I access Era Charts on mobile?",
+      answer:
+        "Yes, Era Charts is fully responsive and can be accessed from mobile devices via a browser.",
+    },
+  ];
+
   return (
     <div className="faq-bg">
       <div className="container p-5">
@@ -22,160 +61,36 @@ const Faq = () => {
           className="accordion accordion-flush mt-5"
           id="accordionFlushExample"
         >
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button
-                className="accordion-button collapsed fw-medium"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne"
-                aria-expanded="false"
-                aria-controls="flush-collapseOne"
+          {faqItems.map((item, index) => (
+            <div className="accordion-item" key={index}>
+              <h2 className="accordion-header">
+                <button
+                  className={`accordion-button ${
+                    activeIndex === index ? "" : "collapsed"
+                  }`}
+                  type="button"
+                  aria-expanded={activeIndex === index}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  {item.question}
+                  <span className="ms-auto">
+                    {activeIndex === index ? (
+                      <i className="bi bi-dash-circle-fill fs-4" />
+                    ) : (
+                      <i className="bi bi-plus-circle-fill fs-4" />
+                    )}
+                  </span>
+                </button>
+              </h2>
+              <div
+                className={`accordion-collapse collapse ${
+                  activeIndex === index ? "show" : ""
+                }`}
               >
-                How do I sign up for Era Chart?
-              </button>
-            </h2>
-            <div
-              id="flush-collapseOne"
-              className="accordion-collapse collapse"
-              data-bs-parent="#accordionFlushExample"
-            >
-              <div className="accordion-body fw-light">
-                Click Launch Charts in the header. This will bring you to the
-                login/registration page. If it's your first time here, make an
-                account.. it's free!
+                <div className="accordion-body fw-light">{item.answer}</div>
               </div>
             </div>
-          </div>
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button
-                className="accordion-button collapsed fw-medium"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo"
-                aria-expanded="false"
-                aria-controls="flush-collapseTwo"
-              >
-                Is Era Charts free to use?
-              </button>
-            </h2>
-            <div
-              id="flush-collapseTwo"
-              className="accordion-collapse collapse"
-              data-bs-parent="#accordionFlushExample"
-            >
-              <div className="accordion-body fw-light">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> className. This is
-                the second item's accordion body. Let's imagine this being
-                filled with some actual content.
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button
-                className="accordion-button collapsed fw-medium"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree"
-                aria-expanded="false"
-                aria-controls="flush-collapseThree"
-              >
-                Can I trade directly on Era Charts?
-              </button>
-            </h2>
-            <div
-              id="flush-collapseThree"
-              className="accordion-collapse collapse"
-              data-bs-parent="#accordionFlushExample"
-            >
-              <div className="accordion-body fw-light">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> className. This is
-                the third item's accordion body. Nothing more exciting happening
-                here in terms of content, but just filling up the space to make
-                it look, at least at first glance, a bit more representative of
-                how this would look in a real-world application.
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button
-                className="accordion-button collapsed fw-medium"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseFour"
-                aria-expanded="false"
-                aria-controls="flush-collapseFour"
-              >
-                Can I trade directly on Era Charts?
-              </button>
-            </h2>
-            <div
-              id="flush-collapseFour"
-              className="accordion-collapse collapse"
-              data-bs-parent="#accordionFlushExample"
-            >
-              <div className="accordion-body fw-light">
-                Click Launch Charts in the header. This will bring you to the
-                login/registration page. If it's your first time here, make an
-                account.. it's free!
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button
-                className="accordion-button collapsed fw-medium"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseFive"
-                aria-expanded="false"
-                aria-controls="flush-collapseFive"
-              >
-                How secure is my data on Era Charts?
-              </button>
-            </h2>
-            <div
-              id="flush-collapseFive"
-              className="accordion-collapse collapse"
-              data-bs-parent="#accordionFlushExample"
-            >
-              <div className="accordion-body fw-light">
-                Click Launch Charts in the header. This will bring you to the
-                login/registration page. If it's your first time here, make an
-                account.. it's free!
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button
-                className="accordion-button collapsed fw-medium"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseSix"
-                aria-expanded="false"
-                aria-controls="flush-collapseSix"
-              >
-                Can I access Era Charts on mobile?
-              </button>
-            </h2>
-            <div
-              id="flush-collapseSix"
-              className="accordion-collapse collapse"
-              data-bs-parent="#accordionFlushExample"
-            >
-              <div className="accordion-body fw-light">
-                Click Launch Charts in the header. This will bring you to the
-                login/registration page. If it's your first time here, make an
-                account.. it's free!
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

@@ -6,7 +6,8 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top py-3">
         <div className="container">
-          <img src={`${process.env.PUBLIC_URL}/Logo.png`} alt="logo" />
+          {/* <img src={`${process.env.PUBLIC_URL}/Logo.png`} alt="logo" /> */}
+          <p className="text-white fw-bold fs-5">Logo</p>
           <button
             className="navbar-toggler shadow-none border-0"
             type="button"
@@ -25,7 +26,8 @@ const Navbar = () => {
             aria-labelledby="offcanvasNavbarLabel"
           >
             <div className="offcanvas-header border-bottom">
-              <img src={`${process.env.PUBLIC_URL}/Logo.png`} alt="logo" />
+              {/* <img src={`${process.env.PUBLIC_URL}/Logo.png`} alt="logo" /> */}
+              <p className="text-white fw-bold fs-5">Logo</p>
               <button
                 type="button"
                 className="btn-close btn-close-white shadow-none"
